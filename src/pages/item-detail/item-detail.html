@@ -2,17 +2,45 @@
 
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
-  </div>
+  <!-- <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div> -->
 
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
-  </div>
+  <ion-card>
+    <ion-card-header>
+    	Historial
+    </ion-card-header>
+    <ion-card-content>         
+       <img [src]="'assets/img/sparc/chart.png'" />
+       
+    </ion-card-content>
+  </ion-card>
+
+  
+
+  <ion-grid>
+  <ion-row>
+    <ion-col col-12>
+	    <div padding>
+		    <h2>Valor actual: {{item.value}} {{item.unity}}</h2>
+		  </div>
+  	</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+    	<button ion-button (click)="addItem(item)" full>
+        	GUARDAR NUEVO DATO
+      	</button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+  
+
 </ion-content>

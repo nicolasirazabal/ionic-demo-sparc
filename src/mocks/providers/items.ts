@@ -7,48 +7,49 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "Peso",
+    "profilePic": "assets/img/medical/peso.png",
+    "value": "83",
+    "unity": "kg",
+    "date": "",
+    "history":[]
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Peso",
+        "profilePic": "assets/img/medical/peso.png",
+        "value": "83",
+        "unity": "kg",
+        "date": "",
+        "history":[]
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Cigarrillos",
+        "profilePic": "assets/img/medical/cigarrillos.png",
+        "value": "3",
+        "unity": "por día",
+        "date": "",
+        "history":[],
+        "info":"Consulte sobre prescripción de terapia de sustitución con nicotina y/o nortriptilina o amfebutamona (bupropion) en caso que no haya conseguido dejar de fumar."
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Colesterol",
+        "profilePic": "assets/img/medical/colesterol.png",
+        "value": "8",
+        "unity": "mmol/l (milimoles por litro).",
+        "date": "",
+        "history":[]
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
-      },
-      {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "PAS (Presión Arterial Sistólica)",
+        "profilePic": "assets/img/medical/pas.png",
+        "value": "180",
+        "unity": "mm Hg",
+        "date": "",
+        "history":[]
       }
     ];
 

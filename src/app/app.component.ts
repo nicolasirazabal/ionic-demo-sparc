@@ -40,6 +40,7 @@ export class MyApp {
     { title: 'Login', component: 'LoginPage' },
     { title: 'Signup', component: 'SignupPage' },
     { title: 'Master Detail', component: 'ListMasterPage' },
+    { title: 'Patients', component: 'PatientListPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' }

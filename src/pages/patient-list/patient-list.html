@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>SPARC</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPatient()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let patient of currentPatients">
+      <button ion-item (click)="openPatient(patient)" [ngClass]="patient.class">
+        <ion-avatar  item-start>
+          <img [src]="patient.profilePic" />
+        </ion-avatar >
+        <h2>{{patient.name}}</h2>
+        <p>{{patient.value}} {{patient.unity}}</p>
+        <ion-note item-end *ngIf="patient.note">{{patient.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deletePatient(patient)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

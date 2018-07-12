@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
-import { IonicPage, NavController, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, ViewController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -15,13 +15,18 @@ export class ItemCreatePage {
 
   item: any;
 
+  itemType: any;
+
   form: FormGroup;
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
+  constructor(params: NavParams, public navCtrl: NavController, public viewCtrl: ViewController, formBuilder: FormBuilder, public camera: Camera) {
+    
+    this.itemType = params.get('itemType');
+
     this.form = formBuilder.group({
       profilePic: [''],
-      name: ['', Validators.required],
-      about: ['']
+      value: ['', Validators.required],
+      date: ['']
     });
 
     // Watch the form for changes, and
